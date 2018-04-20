@@ -1,0 +1,156 @@
+body{
+    background-color: #d3e8c9;
+    color: #555;
+    font-size: small;
+}
+
+.container-full {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#head {
+    background: #333;
+    border-bottom: 4px solid #73796B;
+    min-height: 75px;
+}
+
+#docs-container{
+    padding: 5px;
+    
+}
+
+div.url span{
+    font-size: xx-large;
+}
+div.url button{
+    margin-right: 10px
+}
+
+div.url span.url-param{
+    border-bottom: 2px solid green;
+    background-color: #d3e8c9;
+}
+.page {
+    margin-top: -10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+    padding-top: 20px;
+    padding-bottom: 15px;
+    display: block;
+    min-height: calc( 100vh - 75px);
+}
+
+#status-icon{
+    /* background-color: #008299;
+    width: 50px;
+    height: 50px; */
+    display: block;
+    border-radius: 5px;
+    margin-top: -20px;
+    position: absolute;
+    right: 20px;
+}
+
+#routes-container{
+    padding-top: 5px;
+    height: calc( 100vh - 75px);
+    display: block;
+    overflow-y: scroll;
+}
+#routes-container button{
+    margin: 2px
+}
+.deprecated {
+    background-color: lightgray;
+}
+.route {
+    padding: 5px;
+}
+.method { 
+    margin-right: 10px;
+    color: white; 
+    font-size: small;
+    width: 75px;
+    padding: 1px;
+    opacity: 0.7
+}
+.selected {
+    background-color : darkseagreen
+}
+.GET { background-color : green }
+.HEAD { background-color : #6ad346 }
+.PUT { background-color : orange }
+.POST { background-color : #9364ff }
+.DELETE { background-color : red }
+.OPTIONS { background-color : #0099f6 }
+.PATCH { background-color : cyan }
+.TRACE { background-color : #009c87 }
+.CONNECT { background-color : #c574b8 }
+.COPY { background-color : #f76aa1 }
+.LINK { background-color : #145c85 }
+.UNLINK { background-color : #59859e }
+.PURGE { background-color : #ff6633 }
+.LOCK { background-color : #25bfdd }
+.UNLOCK { background-color : #008299 }
+.PROPFIND { background-color : #00e198 }
+.VIEW { background-color: #fec900 }
+
+
+
+.rr table{
+    color: #3b4151;
+    font-size: small;
+}
+.rr table{
+    width:100%;
+    padding:0 10px;
+    border-collapse:collapse;
+ }
+ .rr table.headers td{
+    font-size:12px;
+    font-weight:300;
+    vertical-align:middle;
+    font-family:Source Code Pro,monospace;
+    font-weight:600;
+    color:#3b4151
+ }
+ .rr table tbody tr td{
+    padding:10px 0 0;
+    vertical-align:top
+ }
+ .rr table tbody tr td:first-of-type{
+    max-width:20%;
+    /* min-width:6em; */
+    padding:10px;
+ }
+ .rr table thead tr td,.rr table thead tr th{
+    font-size:12px;
+    font-weight:700;
+    padding:12px 0;
+    text-align:left;
+    border-bottom:1px solid rgba(59,65,81,.2);
+    font-family:Open Sans,sans-serif;
+    color:#3b4151
+ }
+
+ .rr table pre{
+    font-size:12px;
+    margin:0;
+    padding:10px;
+    white-space:pre-wrap;
+    word-wrap:break-word;
+    word-break:break-all;
+    word-break:break-word;
+    -webkit-hyphens:auto;
+    -ms-hyphens:auto;
+    hyphens:auto;
+    border-radius:4px;
+    background:#41444e;
+    overflow-wrap:break-word;
+    font-family:Source Code Pro,monospace;
+    font-weight:600;
+    color:#fff
+ }
