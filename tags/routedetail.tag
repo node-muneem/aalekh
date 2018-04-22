@@ -11,10 +11,9 @@
     <br>
     <p>Description</p>
     <p>{ this.opts.route.aalekh.description }</p>
-
     <div class="form-group">
-        <select class="form-control form-control-sm" id="scenarios">
-            <option selected="true" each={ option in this.opts.route.aalekh.scenarios } value= "{ option }">{ option }</option>
+        <select class="form-control form-control-sm" id="select-scenarios">
+            <option selected={ index === 1} each={ scenario, index in this.opts.route.aalekh.scenarios } value= "{ index }">{ scenario.description }</option>
         </select>
     </div>
 </routedetail>

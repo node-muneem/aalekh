@@ -58,7 +58,7 @@ const routesDetail = [{
             phone : "some description"
         },
         scenarios : [{
-            scenario: "Successful response",
+            description: "Successful response",
             request : {
                 payload : "",
                 headers : {}
