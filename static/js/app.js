@@ -36,7 +36,7 @@ function getStatusIconPath(status){
 }
 
 function loadDetail(index){
-    riot.mount("routedetail", { route: routesDetail[index]});
+    riot.mount("routedetail", { route: routesDetail[index] , index: index});
 }
 
 const appDetail = {
@@ -61,15 +61,24 @@ const routesDetail = [{
             description: "Successful response",
             request : {
                 payload : "",
-                headers : {}
+                headers : ""
             },
             response : {
-                "201" : {
-                    payload : "",
-                    headers : {
-
-                    }
-                }
+                status: "201",
+                payload : "Successful",
+                headers : ""
+            },
+            type : "content/type"
+        },{
+            description: "Error response",
+            request : {
+                payload : "",
+                headers : ""
+            },
+            response : {
+                status: "500",
+                payload : "Error",
+                headers : ""
             },
             type : "content/type"
         }]

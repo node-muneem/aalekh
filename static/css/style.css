@@ -118,14 +118,12 @@ div.url span.url-param{
     color:#3b4151
  }
  .rr table tbody tr td{
-    padding:10px 0 0;
+    padding:5px;
     vertical-align:top
  }
- .rr table tbody tr td:first-of-type{
-    max-width:20%;
-    /* min-width:6em; */
+ /* .rr table tbody tr td{
     padding:10px;
- }
+ } */
  .rr table thead tr td,.rr table thead tr th{
     font-size:12px;
     font-weight:700;
