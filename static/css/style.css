@@ -68,6 +68,7 @@ div.url span.url-param{
 }
 .route {
     padding: 5px;
+    cursor: pointer;
 }
 .method { 
     margin-right: 10px;
@@ -77,7 +78,7 @@ div.url span.url-param{
     padding: 1px;
     opacity: 0.7
 }
-.selected {
+.selected, .highlight {
     background-color : darkseagreen
 }
 .GET { background-color : green }

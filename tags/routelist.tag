@@ -9,13 +9,16 @@
     </div>
     <script>
         this.on('mount', function(){
-            $(".route").mouseover(function(){
-                $(this).attr("font-size", "medium");
-            })
-
+            $(".route").mouseenter(function(){
+                $(this).addClass("highlight");
+            });
+            $(".route").click(function(){
+                $(".route").removeClass("selected");
+                $(this).addClass("selected");
+            });
             $(".route").mouseout(function(){
-                $(this).attr("font-size", "small");
-            })
+                $(this).removeClass("highlight");
+            });
 
             $("#route-filter").keyup(function(){
                 if($("#route-filter").val() === ""){
