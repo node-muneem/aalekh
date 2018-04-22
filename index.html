@@ -10,6 +10,7 @@
             
             <div class="row no-gutters">
                 <div id="routes-container" class="col-md-3">
+                    <routelist></routelist>
                         <div class="route"> <img class="route-status" src="static/img/inprogress.png" width="16px"><button class="method GET btn btn-sm">GET</button> /some/very/very/very/long/route</div>
                         <div class="route"> <img class="route-status" src="static/img/deprecated.png" width="16px"><button class="method HEAD btn btn-sm">HEAD</button> /some/very/very/very/long/route</div>
                         <div class="route"> <img class="route-status" src="static/img/readytouse.png" width="16px"><button class="method PUT btn btn-sm">PUT</button> /some/very/very/very/long/route</div>
@@ -47,7 +48,8 @@
                         <div class="route"> <div class="route-status"></div><button class="method VIEW btn btn-sm">VIEW</button> /some/very/very/very/long/route</div>
                 </div>
                 <div id="docs-container" class="col-md-9 page">
-                    <div id="status-icon"><img src="static/img/inprogress.png" width="30px"></div>
+                    <routedetail></routedetail>
+                   <!--  <div id="status-icon"><img src="static/img/inprogress.png" width="30px"></div>
                     <div class="url"><button class="POST btn btn-md">POST</button><span>/some</span><span>/route</span><span>/with</span><span class="url-param">/:param</span></div>
                     <br>
                     <p>Description</p>
@@ -101,15 +103,20 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-
-
+                    </div> -->
                 </div>
             </div>
         </div>
 
         <script type="text/javascript" src="static/js/3rdparty/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="static/js/3rdparty/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="static/js/3rdparty/riot.min.js"></script>
         <script type="text/javascript" src="static/js/app.js"></script>
+        <script type="text/javascript" src="tags/alltags.js"></script>
+
+        <script>
+            riot.mount("routelist", {method: "PUT", status : "deprecated" , uri : "/sample/uri/to/test/riot/tag"});
+            /* riot.mount("routedetail") */
+        </script>
     </body>
 </html>

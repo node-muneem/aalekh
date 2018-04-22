@@ -17,3 +17,61 @@ var methodColorMapping = {
     PROPFIND : "#00e198",
     VIEW: "#fec900"
 }
+
+function getStatusIconPath(status){
+    switch(status){
+        case "in progress":
+        case "under development":
+            return "static/img/inprogress.png";
+        case "deprecated":
+        case "discontinued":
+        case "on hold":
+            return "static/img/deprecated.png";
+        case "ready to use":
+        case "completed":
+            return "static/img/readytouse.png";
+        default:
+            return "static/img/readytouse.png";
+    }
+}
+
+function loadDetail(index){
+    riot.mount("routedetail", { route: routesDetail[index]});
+}
+
+const appDetail = {
+
+}
+function getRouteDetails(){
+    return routesDetail;
+}
+const routesDetail = [{
+    uri : "/this/is/the/sample/route",
+    when : "GET" ,
+    to : "",
+    after : ["" , ""],
+    then : ["" , ""],
+    aalekh : {
+        description : "The purpose of creating this end point",
+        status : "deprecated",
+        params : {
+            phone : "some description"
+        },
+        scenarios : [{
+            scenario: "Successful response",
+            request : {
+                payload : "",
+                headers : {}
+            },
+            response : {
+                "201" : {
+                    payload : "",
+                    headers : {
+
+                    }
+                }
+            },
+            type : "content/type"
+        }]
+    }
+}];
