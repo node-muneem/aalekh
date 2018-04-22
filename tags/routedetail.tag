@@ -11,8 +11,7 @@
         </span>
     </div>
     <br>
-    <p>Description</p>
-    <p>{ opts.route.aalekh.description }</p>
+    <p class="route-description">{ opts.route.aalekh.description }</p>
     <div class="form-group">
         <select class="form-control form-control-sm" id="select-scenarios" onchange={displayScenario}>
             <option selected="true" disabled="true">Select a scenario</option>

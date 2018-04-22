@@ -107,6 +107,10 @@ div.url span.url-param{
     padding: 0 4px;
 }
 
+.route-description {
+    min-height: 150px;
+}
+
 .rr table{
     color: #3b4151;
     font-size: small;

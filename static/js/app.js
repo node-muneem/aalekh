@@ -22,13 +22,15 @@ function getStatusIconPath(status){
     switch(status){
         case "in progress":
         case "under development":
-            return "static/img/inprogress.png";
+        case "unstable":
+        return "static/img/inprogress.png";
         case "deprecated":
         case "discontinued":
         case "on hold":
-            return "static/img/deprecated.png";
+        return "static/img/deprecated.png";
         case "ready to use":
         case "completed":
+        case "stable":
             return "static/img/readytouse.png";
         default:
             return "static/img/readytouse.png";
@@ -46,7 +48,7 @@ function getRouteDetails(){
     return routesDetail;
 }
 var routesDetail = [{
-    uri : "/this/is/the/sample/:route",
+    uri : "/this/is/the/sample/:route(amit|gupta)",
     when : "GET" ,
     to : "",
     after : ["" , ""],
