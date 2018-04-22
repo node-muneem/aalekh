@@ -98,7 +98,14 @@ div.url span.url-param{
 .PROPFIND { background-color : #00e198 }
 .VIEW { background-color: #fec900 }
 
-
+.param-tooltip{
+    position: absolute;
+    width: 200px;
+    background-color: #fec900;
+    z-index: 10;
+    font-size: small;
+    padding: 0 4px;
+}
 
 .rr table{
     color: #3b4151;

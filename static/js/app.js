@@ -39,14 +39,14 @@ function loadDetail(index){
     riot.mount("routedetail", { route: routesDetail[index] , index: index});
 }
 
-const appDetail = {
+var appDetail = {
 
 }
 function getRouteDetails(){
     return routesDetail;
 }
-const routesDetail = [{
-    uri : "/this/is/the/sample/route",
+var routesDetail = [{
+    uri : "/this/is/the/sample/:route",
     when : "GET" ,
     to : "",
     after : ["" , ""],
@@ -55,7 +55,7 @@ const routesDetail = [{
         description : "The purpose of creating this end point",
         status : "deprecated",
         params : {
-            phone : "some description"
+            route : "some description"
         },
         scenarios : [{
             description: "Successful response",

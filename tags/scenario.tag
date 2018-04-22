@@ -1,12 +1,11 @@
 <scenario >
     <div class="rr">
-        <div>Content Type: {opts.scenario.type}</div>
-        <div>Status Code: {opts.scenario.response.status}</div>
+        <div >Content Type: {opts.scenario.type}</div>
         <table>
             <thead>
                 <tr>
                     <td>Request</td>
-                    <td>Response</td>
+                    <td>Response : {opts.scenario.response.status}</td>
                 </tr>
             </thead>
             <tbody>
