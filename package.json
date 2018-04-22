@@ -4,7 +4,7 @@
   "description": "Muneem plugin to add documentation api",
   "main": "index.js",
   "scripts": {
-    "compile": "riot tags/ tags/alltags.js"
+    "compile": "riot -w tags/ tags/alltags.js"
   },
   "keywords": [
     "muneem",
