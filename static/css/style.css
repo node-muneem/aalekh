@@ -43,17 +43,6 @@ div.url span.url-param{
     min-height: calc( 100vh - 75px);
 }
 
-#status-icon{
-    /* background-color: #008299;
-    width: 50px;
-    height: 50px; */
-    display: block;
-    border-radius: 5px;
-    margin-top: -20px;
-    position: absolute;
-    right: 20px;
-}
-
 #routes-container{
     padding-top: 5px;
     height: calc( 100vh - 75px);
@@ -63,12 +52,17 @@ div.url span.url-param{
 #routes-container button{
     margin: 2px
 }
+.icon-traffic-cone{
+    color: orange;
+}
+.icon-attention{
+    color: yellow;
+}
+.icon-ok{
+    color: green;
+}
 .deprecated {
     background-color: lightgray;
-}
-.route {
-    padding: 5px;
-    cursor: pointer;
 }
 .method { 
     margin-right: 10px;
@@ -78,9 +72,7 @@ div.url span.url-param{
     padding: 1px;
     opacity: 0.7
 }
-.selected, .highlight {
-    background-color : darkseagreen
-}
+
 .GET { background-color : green }
 .HEAD { background-color : #6ad346 }
 .PUT { background-color : orange }
@@ -102,10 +94,11 @@ div.url span.url-param{
 .param-tooltip{
     position: absolute;
     width: 200px;
-    background-color: #fec900;
+    /* background-color: #fec900; */
     z-index: 10;
     font-size: small;
     padding: 0 4px;
+    box-shadow: rgb(222, 226, 230) 0px 0px 15px 2px;
 }
 
 .route-description {

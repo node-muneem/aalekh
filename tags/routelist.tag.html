@@ -1,0 +1,41 @@
+<routelist>
+    <style>
+        .route {
+            padding: 5px;
+            cursor: pointer;
+        }
+        .selected, .route:hover{
+            background-color : darkseagreen
+        }
+    </style>
+    <input id="route-filter" class="form-control form-control-sm" name="route-filter" type="text" onkeyup={filter}>
+    <div each={ route,index in getRouteDetails()} >
+        <div class={route: true, deprecated: route.aalekh.status} onclick={itemClick}>
+            <i class="route-status { getStatusIconClass(route.aalekh.status) }"></i>
+            <button class="method {route.when} btn btn-sm">{route.when}</button>
+            <span onclick="loadDetail({index})">{route.uri}</span>
+        </div>
+    </div>
+    <script>
+        var tag = this;
+        tag.itemClick = function(event){
+            $(".route").removeClass("selected");
+            $(event.target).parent(".route").addClass("selected");
+        }
+
+        tag.filter = function(event){
+            var text = $(event.target).val();
+            if(text === ""){
+                $(".route").show();
+            }else{
+                text= text.toLowerCase();
+                $(".route").hide();
+                $(".route").each( function(){
+                    if( $(this).html().toLowerCase().indexOf( text ) > -1 ){
+                        $(this).show();
+                    }
+                });
+            }
+        }
+    </script>
+</routelist>

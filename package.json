@@ -1,10 +1,10 @@
 {
   "name": "aalekh",
   "version": "1.0.0",
-  "description": "Muneem plugin to add documentation api",
+  "description": "Muneem plugin to add API documentation",
   "main": "index.js",
   "scripts": {
-    "compile": "riot -w tags/ tags/alltags.js"
+    "compile": "riot -w tags/ --ext html static/js/alltags.js"
   },
   "keywords": [
     "muneem",
@@ -15,7 +15,6 @@
   "author": "Amit Gupta",
   "license": "MIT",
   "dependencies": {
-    "riot": "^3.9.4",
-    "riot-cli": "^4.0.1"
+    "riot": "^3.9.4"
   }
 }

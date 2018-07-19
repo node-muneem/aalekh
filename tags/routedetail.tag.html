@@ -1,14 +1,14 @@
 <routedetail>
-    <div id="status-icon">
-        <img src="{ getStatusIconPath( opts.route.aalekh.status) }" width="30px">
-    </div>
     <div class="url">
         <button class="{ opts.route.when } btn btn-md">{ opts.route.when }</button>
-        <span class="align-middle" each={urlPart,index in this.urlParts }>
-            <!-- { urlPart.p_name} -->
-            <span class={ url-param: urlPart.isParam } tooltip="tooltip-{ urlPart.p_name }" >/{ urlPart.p_name }</span>
-            <div if={ urlPart.isParam }  class="param-tooltip" id="tooltip-{ urlPart.p_name }" data={ urlPart.description }/>
+        <span>
+            <span class="align-middle" each={urlPart,index in this.urlParts }>
+                <!-- { urlPart.p_name} -->
+                <span class={ url-param: urlPart.isParam } tooltip="tooltip-{ urlPart.p_name }" >/{ urlPart.p_name }</span>
+                <div if={ urlPart.isParam }  class="param-tooltip" id="tooltip-{ urlPart.p_name }" data={ urlPart.description }/>
+            </span>
         </span>
+        <i class="{ getStatusIconClass( opts.route.aalekh.status) } float-right" style="font-size: xx-large"></i>
     </div>
     <br>
     <p class="route-description">{ opts.route.aalekh.description }</p>
@@ -20,18 +20,18 @@
     </div>
 
     <script>
-
-        displayScenario(e){
+        var tag = this;
+        tag.displayScenario = function(e){
             riot.mount("scenario", { scenario : opts.route.aalekh.scenarios[e.target.value] })
         }
 
-        isParam(urlPart){
+        tag.isParam = function(urlPart){
             return urlPart.startsWith(":");
         }
 
         var paramRegexStr = new RegExp(":([^\\/\\-\\(]+)-?(\\(.*?\\))?");
 
-        paramParts(urlPart){
+        tag.paramParts = function(urlPart){
             //:param
             //:param([regx]+)
             //:param(:TYPE:)
@@ -45,7 +45,7 @@
                 return {p_name : urlPart, isParam : false };
             }
         }
-        displayParamDetail(param){
+        tag.displayParamDetail = function(param){
             var description = "";
             if( opts.route.aalekh.params && opts.route.aalekh.params[ param.p_name ] ){
                 description += "<p>" + opts.route.aalekh.params[ param.p_name ] + "</p>";

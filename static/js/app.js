@@ -18,22 +18,22 @@ var methodColorMapping = {
     VIEW: "#fec900"
 }
 
-function getStatusIconPath(status){
+function getStatusIconClass(status){
     switch(status){
         case "in progress":
         case "under development":
         case "unstable":
-        return "static/img/inprogress.png";
+            return "icon-traffic-cone";
         case "deprecated":
         case "discontinued":
         case "on hold":
-        return "static/img/deprecated.png";
+            return "icon-attention";
         case "ready to use":
         case "completed":
         case "stable":
-            return "static/img/readytouse.png";
+            return "icon-ok";
         default:
-            return "static/img/readytouse.png";
+            return "icon-ok";
     }
 }
 
@@ -44,6 +44,7 @@ function loadDetail(index){
 var appDetail = {
 
 }
+
 function getRouteDetails(){
     return routesDetail;
 }
