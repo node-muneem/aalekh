@@ -1,6 +1,10 @@
 # आलेख (Aalekh)
 Documentation library like swagger for मुनीम (Muneem) framework.
 
+<div style="text-align: center;">
+<img src="static/img/aalekh_logo.png" width="200px" >
+</div>
+
 Example: When documents are saves in separate file
 ```js
 var path = require("path");
