@@ -64,11 +64,12 @@ riot.tag2('routedetail', '<div class="url"> <button class="{opts.route.when} btn
             })
         });
 });
-riot.tag2('routelist', '<input id="route-filter" class="form-control form-control-sm" name="route-filter" type="text" onkeyup="{filter}"> <div each="{route,index in getRouteDetails()}"> <div class="{route: true, deprecated: route.aalekh.status}" onclick="{itemClick}"> <i class="route-status {getStatusIconClass(route.aalekh.status)}"></i> <button class="method {route.when} btn btn-sm">{route.when}</button> <span onclick="loadDetail({index})">{route.uri}</span> </div> </div>', 'routelist .route,[data-is="routelist"] .route{ padding: 5px; cursor: pointer; } routelist .selected,[data-is="routelist"] .selected,routelist .route:hover,[data-is="routelist"] .route:hover{ background-color : darkseagreen }', '', function(opts) {
+riot.tag2('routelist', '<input id="route-filter" class="form-control form-control-sm" name="route-filter" type="text" onkeyup="{filter}"> <div each="{route,index in routesDetail}"> <div class="route {getStatusIconClass(route.aalekh.status)}-bg" onclick="{itemClick}"> <i class="route-status {getStatusIconClass(route.aalekh.status)}"></i> <button class="method {route.when} btn btn-sm">{route.when}</button> <span>{route.uri}</span> </div> </div>', 'routelist .route,[data-is="routelist"] .route{ padding: 5px; cursor: pointer; } routelist .selected,[data-is="routelist"] .selected,routelist .route:hover,[data-is="routelist"] .route:hover{ background-color : darkseagreen }', '', function(opts) {
         var tag = this;
         tag.itemClick = function(event){
             $(".route").removeClass("selected");
             $(event.target).parent(".route").addClass("selected");
+            riot.mount("routedetail", { route: routesDetail[event.item.index]});
         }
 
         tag.filter = function(event){

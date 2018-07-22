@@ -1,0 +1,35 @@
+- route :
+    uri : "/your/:phone"
+    aalekh : false
+
+- route :
+    uri : "/this/is/deprecated"
+    aalekh :
+        status : deprecated
+
+- route :
+    uri : /multiple/methods
+    when : [ "POST", "PUT" ]
+
+- route :
+    uri : "/my/:age([0-9]+)"
+    when : GET
+    aalekh : 
+        description : The purpose of creating this end point
+        status : "in progress"
+        params :
+            age : "My are in 2 digits"
+        scenarios :
+            -   description: "This scenario is not specified"
+                request : 
+                    #payload :
+                    headers :
+                      auth_token: 98sfns8fwn23r99hco
+                response :
+                    status: 201
+                    payload : >
+                      This is a raw response to check if \n
+                      multiline response can be returned
+                    headers :
+                      cache_control : false
+                type : content/type

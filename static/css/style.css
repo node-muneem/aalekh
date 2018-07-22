@@ -62,12 +62,12 @@ div.url span.url-param{
     color: orange;
 }
 .icon-attention{
-    color: yellow;
+    color: red;
 }
 .icon-ok{
     color: green;
 }
-.deprecated {
+.icon-attention-bg {
     background-color: lightgray;
 }
 .method { 
@@ -100,7 +100,7 @@ div.url span.url-param{
 .param-tooltip{
     position: absolute;
     width: 200px;
-    /* background-color: #fec900; */
+    background-color: #fec900;
     z-index: 10;
     font-size: small;
     padding: 0 4px;

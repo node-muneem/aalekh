@@ -15,6 +15,8 @@
   "author": "Amit Gupta",
   "license": "MIT",
   "dependencies": {
-    "riot": "^3.9.4"
+    "muneem": "file:../../muneem",
+    "riot": "^3.9.4",
+    "yamljs": "^0.3.0"
   }
 }

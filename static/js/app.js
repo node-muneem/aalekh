@@ -37,53 +37,21 @@ function getStatusIconClass(status){
     }
 }
 
-function loadDetail(index){
-    riot.mount("routedetail", { route: routesDetail[index] , index: index});
+var routesDetail;
+
+function fetchRouteDetails(){
+    $.ajax({
+        url: "docs",
+        success: function(result){
+            try{
+                //routesDetail = JSON.parse(result);
+                routesDetail = result;
+                riot.mount('routelist' );
+            }catch(err){
+                console.log(err);
+            }
+        }
+    });
 }
 
-var appDetail = {
-
-}
-
-function getRouteDetails(){
-    return routesDetail;
-}
-var routesDetail = [{
-    uri : "/this/is/the/sample/:route(amit|gupta)",
-    when : "GET" ,
-    to : "",
-    after : ["" , ""],
-    then : ["" , ""],
-    aalekh : {
-        description : "The purpose of creating this end point",
-        status : "deprecated",
-        params : {
-            route : "some description"
-        },
-        scenarios : [{
-            description: "Successful response",
-            request : {
-                payload : "",
-                headers : ""
-            },
-            response : {
-                status: "201",
-                payload : "Successful",
-                headers : ""
-            },
-            type : "content/type"
-        },{
-            description: "Error response",
-            request : {
-                payload : "",
-                headers : ""
-            },
-            response : {
-                status: "500",
-                payload : "Error",
-                headers : ""
-            },
-            type : "content/type"
-        }]
-    }
-}];
+fetchRouteDetails();
