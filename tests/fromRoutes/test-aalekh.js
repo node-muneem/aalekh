@@ -5,12 +5,12 @@ var muneem = new Muneem({
 });
 var aalekh = require("./../../index")(muneem);
 
-muneem.add("handler", aalekh, "aalekh");//TODO: make it optional
+//muneem.add("handler", aalekh, "aalekh");
 
 muneem.add("route",{
     uri : "/aalekh/*",
     when : "GET",
-    to : "aalekh", //TODO: pass handler object directly
+    to : aalekh,
     compress : false,
     aalekh : false
 })

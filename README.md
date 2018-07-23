@@ -13,12 +13,12 @@ var docsHandler = require("aalekh")( (path.join(__dirname, "mappings/docs.yaml")
 
 var muneem = new Muneem();
 
-muneem.add("handler", aalekh, "docsHandler");//TODO: make it optional
+//muneem.add("handler", aalekh, "docsHandler");
 
 muneem.add("route",{
     uri : "/aalekh/*",
     when : "GET",
-    to : "docsHandler"//TODO: pass handler object directly
+    to : docsHandler,
     compress : false
 })
 
@@ -33,14 +33,14 @@ var path = require("path");
 var muneem = new Muneem({
     mappings : path.join(__dirname, "routeMapping.yaml")
 });
-var aalekh = require("./../../index")(muneem);
+var docsHandler = require("./../../index")(muneem);
 
-muneem.add("handler", aalekh, "aalekh");//TODO: make it optional
+//muneem.add("handler", aalekh, "docsHandler");
 
 muneem.add("route",{
     uri : "/aalekh/*",
     when : "GET",
-    to : "aalekh", //TODO: pass handler object directly
+    to : docsHandler,
     compress : false,
     aalekh : false
 })

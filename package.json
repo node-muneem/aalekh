@@ -14,7 +14,7 @@
   "author": "Amit Gupta",
   "license": "MIT",
   "devDependencies": {
-    "muneem": "^1.1.1"
+    "muneem": "^1.2.0"
   },
   "dependencies": {
     "riot": "^3.9.4",
