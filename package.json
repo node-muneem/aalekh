@@ -17,7 +17,7 @@
     "muneem": "^1.2.0"
   },
   "dependencies": {
-    "riot": "^3.9.4",
+    "riot": "^3.13.1",
     "yamljs": "^0.3.0"
   }
 }
