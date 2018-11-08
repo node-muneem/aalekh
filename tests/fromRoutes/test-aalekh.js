@@ -11,7 +11,6 @@ muneem.add("route",{
     uri : "/aalekh/*",
     when : "GET",
     to : aalekh,
-    compress : false,
     aalekh : false
 })
 

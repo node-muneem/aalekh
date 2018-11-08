@@ -1,8 +1,6 @@
 var Muneem = require("muneem");
 var path = require("path");
-var muneem = new Muneem({
-    compress : false
-});
+var muneem = new Muneem();
 var aalekh = require("./../../index")(path.join(__dirname, "aalekhMapping.yaml") );
 
 //muneem.add("handler", aalekh, "aalekh");
