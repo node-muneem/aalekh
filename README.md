@@ -33,7 +33,7 @@ var path = require("path");
 var muneem = new Muneem({
     mappings : path.join(__dirname, "routeMapping.yaml")
 });
-var docsHandler = require("./../../index")(muneem);
+var docsHandler = require("aalekh")(muneem);
 
 //muneem.add("handler", aalekh, "docsHandler");
 
