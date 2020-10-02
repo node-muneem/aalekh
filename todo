@@ -1,0 +1,17 @@
+* group routes
+* information which can be collected from context, server configuration, or machine detail
+    - server: host, port
+    - route: url, method, list of handlers
+
+maintenance : 
+    contactTo :
+        name : "amit"
+        avator : url
+    signedOffBy : "amit"
+    reviewedBy : "",
+    lastEditDate : ""
+
+    set content-type and enable compression.
+
+Design reference
+    https://fast-xml-parser.saasify.sh/docs#operation/convertURLToXMLGET
